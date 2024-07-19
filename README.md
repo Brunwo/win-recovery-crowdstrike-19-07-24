@@ -1,6 +1,6 @@
 # win-recovery-crowdstrike-19-07-24
 
-udpate : The image is not bootable at the moment, fork if you know how to fix or wait for an update
+update : The image is bootable via qemu, please open an issue if you have trouble running from a physical drive 
 
 This can only help if your windows partition is *unencrypted*
 
