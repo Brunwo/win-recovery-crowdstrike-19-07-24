@@ -17,7 +17,7 @@ jobs:
       run: sudo apt-get update && sudo apt-get install -y genisoimage wget
 
     - name: Download Tiny Core Linux ISO
-      run: wget http://www.tinycorelinux.net/15.x/x86/release/Core-current.iso -O tinycore.iso
+      run: wget http://www.tinycorelinux.net/15.x/x86/release/Core-current.iso
 
     - name: Run custom ISO creation script
       run: sudo bash BuildIso.sh Core-current.iso
