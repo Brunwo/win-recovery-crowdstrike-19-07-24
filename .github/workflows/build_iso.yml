@@ -20,7 +20,7 @@ jobs:
       run: wget http://www.tinycorelinux.net/15.x/x86/release/Core-current.iso -O tinycore.iso
 
     - name: Run custom ISO creation script
-      run: sudo bash create_custom_iso.sh Core-current.iso
+      run: sudo bash BuildIso.sh Core-current.iso
 
     - name: Upload custom ISO
       uses: actions/upload-artifact@v3
