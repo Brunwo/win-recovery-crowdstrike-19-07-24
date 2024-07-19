@@ -28,24 +28,23 @@ jobs:
         name: tinycore-custom.iso
         path: tmp/tinycore-custom.iso
         
+       
     - name: Create GitHub Release
       id: create_release
-      uses: gh-action-create-release@v1
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         tag_name: 'v1.0.0'
         release_name: 'test Crowdstrike auto-fix bootable ISO'
         draft: false
         prerelease: false
+    - name: Upload release asset
+      uses: actions/upload-release-asset@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: Upload release asset
-      uses: gh-action-upload-release-asset@v1
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: tmp/tinycore-custom.iso
+        asset_path: ./tmp/tinycore-custom.iso
         asset_name: fix-crowdstrike.iso
         asset_content_type: application/octet-stream
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   
-     
