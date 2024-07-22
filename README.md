@@ -1,6 +1,8 @@
 # win-recovery-crowdstrike-19-07-24
 
-update : The image is bootable via qemu, please open an issue if you have trouble running from a physical drive 
+update : [microsoft](https://techcommunity.microsoft.com/t5/intune-customer-success/new-recovery-tool-to-help-with-crowdstrike-issue-impacting/ba-p/4196959) release a similar tool now, with possibility to enter a bitlocker recovery key
+
+The image is bootable via qemu, please open an issue if you have trouble running from a physical drive 
 
 This can only help if your windows partition is *unencrypted*
 
